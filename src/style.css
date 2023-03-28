@@ -1,0 +1,355 @@
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --bg-primary: #334155;
+    --bg-secondary: #0f172a;
+    --text-primary: #f8fafc;
+    --text-secondary:#f59e0b;
+    --font-size: 16px;
+}
+
+.container{
+    background-color: var(--bg-primary);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+.navBar{
+    background-color: var(--bg-secondary);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    padding: 20px 50px;
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+.logo{
+    font-weight: 800;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+}
+.link-navigation{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+}
+.link{
+    border: 1px solid white;
+    margin-right: 1rem;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+.link-item{
+    color: var(--text-primary);
+}
+.link:last-of-type{
+    margin-right: 0;
+}
+.link-item{
+    font-size: 1.2rem;
+    text-decoration: none;
+}
+.link:hover{
+    background-color: var(--bg-primary);
+    transition: 1s ease-in-out;
+}
+.menuBtn{
+    display: none;
+}
+
+.main{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 100%;
+    max-height: 80%;
+    overflow-y: scroll;
+}
+.menu{
+    padding: 2rem 2rem;
+    margin: 20px 0px;
+    flex-wrap: wrap;
+}
+.menuText{
+    text-align: center;
+    font-size: 2rem;
+    color: var(--text-primary);
+}
+
+.menuContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;    
+}
+.prestigeImage{
+    width: 500px;
+    height: 750px;
+    cursor: pointer;
+    transition: all 1.5s;
+}
+.prestigeImage:hover{
+    transform: rotateY(20deg)
+}
+
+.cards{
+    display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-auto-rows: 350px;
+    gap: 15px;
+    margin-left: 30px;
+}
+.card{
+    background-color: var(--bg-secondary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    cursor: pointer;
+    transition: all 1s;
+}
+.card:hover{
+    transform: rotateY(15deg)
+}
+.cardBody{
+    color: var(--text-primary);
+    line-height: 1.5;
+}
+.cardImage{
+    width: 250px;
+    height: 250px;
+}
+.reservation{
+    background-color: var(--bg-secondary);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.reservation > h1{
+    color: var(--text-primary);
+    margin-top: 50px;
+    padding: 30px 0px;
+    font-size: 2rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-style: italic;
+}
+.form{
+    padding: 30px 5px;
+    margin-top: 10px;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.form > input[type="text"],
+.form > input[type="email"]
+{
+    padding: 10px 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    width: 45%;
+    border-radius: 20px;
+    border: 1px solid var(--bg-primary);
+    background-color: var(--bg-secondary);
+    color: var(--text-primary);
+    font-size: .8rem;
+}
+.form > input[type="phone"],
+.form > input[type="number"],
+.form > input[type="date"]{
+    padding: 10px 10px;
+    margin-right: 10px;
+    margin-top: 20px;
+    width: 30%;
+    border-radius: 20px;
+    border: 1px solid var(--bg-primary);
+    background-color: var(--bg-secondary);
+    color: var(--text-primary);
+    font-size: .8rem;
+}
+.form > input[type="submit"]{
+    padding: 10px 10px;
+    margin-right: 10px;
+    margin-top: 20px;
+    width: 25%; 
+    border-radius: 20px;
+    border: none;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    cursor: pointer;
+    transition: ease-in-out .5s;
+}
+.form > input[type="submit"]:hover{
+    background-color: var(--text-secondary);
+    opacity: .7;
+}
+.form > textarea[type="text"]{
+    background-color: var(--bg-secondary);
+    width: 90%;
+    margin-top: 10px;
+    padding: 15px;
+    color: var(--text-primary);
+}
+.contact > .form > input[type="submit"]{
+    background-color: var(--bg-secondary);
+}
+
+.contact{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px 0px;
+}
+.contact > h1{
+    color: var(--text-primary);
+    font-size: 2rem;
+    font-style: italic;
+}
+
+.footer{
+    background-color: var(--bg-secondary);
+    color: var(--text-primary);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    padding: 10px 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+.footer > .p-text{
+    padding: 5px 0;
+}
+
+
+
+
+
+
+@media (max-width: 800px) {
+    .container{
+        display: flex;
+    }
+    .logo{
+        font-size: 1.7rem;
+        text-align: center;
+        color: var(--text-secondary);
+    }
+    .menuBtn{
+        display: flex;
+    }
+    .link-navigation{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        height: 100vh;
+        background-color: var(--bg-secondary);
+        width: 100%;
+        top: 50px;
+        left: -100%;
+        transition: all 1s;
+        z-index: 1;
+    }
+    .link{
+        margin-bottom: 20px;
+        border-left: none;
+        border-top: none;
+        border-right: none;
+        border-bottom: 1px solid var(--text-secondary);
+        width: 150px;
+        text-align: center;
+        color: var(--text-secondary);
+    }
+    .link-navigation.active{
+        left: 0;
+    }
+    .link-item{
+        color: var(--text-secondary);
+    }
+    .menu{
+        margin: 10px 0px;
+        padding: 5px 10px;
+        width: 100%;
+        
+    }
+    .menuContainer{
+        margin: 30px auto;
+        padding: 5px 0;
+    }
+    .prestigeImage{
+       display: none;
+    }
+    .cards{
+        margin: 0;
+    }
+    .form{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 90%;
+    }
+    .reservation > h1{
+        color: var(--text-secondary);
+        font-size: 1.5rem;
+        margin-top: 30px;
+    }
+    .form > input[type="text"],
+    .form > input[type="email"]
+    {   
+        width: 100%;
+        border-radius: 20px;
+        border: 1px solid var(--bg-primary);
+        background-color: var(--bg-secondary);
+        color: var(--text-secondary);
+        font-size: .6rem;
+    }
+    .form > input[type="phone"],
+    .form > input[type="number"],
+    .form > input[type="date"],
+    .form > textarea[type="text"]
+    {   
+        width: 100%;
+        border-radius: 20px;
+        border: 1px solid var(--bg-primary);
+        background-color: var(--bg-secondary);
+        color: var(--text-secondary);
+        font-size: .8rem;
+    }
+    .form > input[type="submit"]{       
+        width: 80%; 
+        border-radius: 20px;
+        border: none;
+        background-color: var(--text-secondary);
+        color: var(--text-primary); 
+        opacity: .6;
+    }
+    .form > input[type="submit"]:hover{
+        opacity: .9;
+    }
+    .footer > .p-text{
+        color: var(--text-secondary);
+    }
+}
