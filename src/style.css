@@ -346,6 +346,7 @@
         color: var(--text-primary); 
         opacity: .6;
         font-size: 1rem;
+        padding: 10px 0px;
     }
     .form > input[type="submit"]:hover{
         opacity: .9;
